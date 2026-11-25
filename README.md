@@ -8,6 +8,7 @@ The website provides customers with an easy way to explore food products, select
 
 ## 🌐 Live Preview
 
+- **Live Website:** [Fit Bowl – Live](https://fit-bowl-nine.vercel.app/)
 - **Project Repository:** [Fit Bowl – GitHub](https://github.com/chanduyadav103/Fit-bowl)
 - **Local Website:** Run the project locally using the instructions below.
 

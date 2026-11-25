@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const phoneNumber = '7981359187';
+const imageUrl = (image) => `${import.meta.env.BASE_URL}images/${image}`;
 
 const products = [
 	{ name: 'Ragi Puttu', image: 'img-4.jpg' },
@@ -30,7 +31,7 @@ function openWhatsApp(message) {
 function ProductCard({ product, onOrder }) {
 	return (
 		<article className="product-card">
-			<img src={`/images/${product.image}`} alt={product.name} />
+			<img src={imageUrl(product.image)} alt={product.name} />
 			<h4>{product.name}</h4>
 			<button className="btn-small" type="button" onClick={() => onOrder(product.name)}>
 				ORDER NOW
@@ -107,7 +108,7 @@ function App() {
 				<div className="container header-inner">
 					<div className="brand">
 						<div className="logo">
-							<img src="/images/img-22.jpeg" alt="Fit Bowl Logo" />
+							<img src={imageUrl('img-22.jpeg')} alt="Fit Bowl Logo" />
 						</div>
 						<div className="brand-text">
 							<div className="name">FIT BOWL</div>
@@ -170,7 +171,7 @@ function App() {
 						</div>
 						<div className="hero-right">
 							<div className="hero-image-wrap">
-								<img src="/images/img-1.png" alt="Fit Bowl Snacks" />
+								<img src={imageUrl('img-1.png')} alt="Fit Bowl Snacks" />
 							</div>
 						</div>
 					</div>
@@ -207,7 +208,7 @@ function App() {
 							<div className="product-grid modal-select-grid">
 								{products.map((product) => (
 									<article className="product-card" key={product.name}>
-										<img src={`/images/${product.image}`} alt={product.name} />
+										<img src={imageUrl(product.image)} alt={product.name} />
 										<h4>{product.name}</h4>
 										<button type="button" onClick={() => setCart((items) => [...items, product.name])}>
 											Add to Cart
@@ -242,7 +243,7 @@ function App() {
 				<section id="about" className="about container">
 					<div className="about-inner">
 						<div className="about-img">
-							<img src="/images/img-22.jpeg" alt="About Fit Bowl" />
+							<img src={imageUrl('img-22.jpeg')} alt="About Fit Bowl" />
 						</div>
 						<div className="about-text">
 							<h3>About Fit Bowl</h3>
